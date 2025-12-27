@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>i2rt_bringup</name>
+  <version>1.0.0</version>
+  <description>Launch files and configurations for I2RT robots</description>
+
+  <maintainer email="support@i2rt.com">I2RT Support</maintainer>
+  <license>MIT</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <exec_depend>i2rt_description</exec_depend>
+  <exec_depend>i2rt_yam_driver</exec_depend>
+  <exec_depend>i2rt_flow_base_driver</exec_depend>
+  <exec_depend>robot_state_publisher</exec_depend>
+  <exec_depend>rviz2</exec_depend>
+
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>

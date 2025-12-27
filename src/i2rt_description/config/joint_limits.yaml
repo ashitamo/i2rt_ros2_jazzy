@@ -1,0 +1,80 @@
+# YAM Arm Joint Limits and Dynamics
+# Based on i2rt Python API configuration
+
+joint_limits:
+  joint1:
+    has_position_limits: true
+    min_position: -2.61799  # -150 degrees
+    max_position: 3.13       # 179.3 degrees
+    has_velocity_limits: true
+    max_velocity: 5.0        # rad/s
+    has_acceleration_limits: true
+    max_acceleration: 10.0   # rad/s^2
+    has_effort_limits: true
+    max_effort: 10.0         # Nm
+
+  joint2:
+    has_position_limits: true
+    min_position: 0.0
+    max_position: 3.65       # 209 degrees
+    has_velocity_limits: true
+    max_velocity: 5.0
+    has_acceleration_limits: true
+    max_acceleration: 10.0
+    has_effort_limits: true
+    max_effort: 10.0
+
+  joint3:
+    has_position_limits: true
+    min_position: 0.0
+    max_position: 3.13       # 179.3 degrees
+    has_velocity_limits: true
+    max_velocity: 5.0
+    has_acceleration_limits: true
+    max_acceleration: 10.0
+    has_effort_limits: true
+    max_effort: 10.0
+
+  joint4:
+    has_position_limits: true
+    min_position: -1.65      # -94.5 degrees
+    max_position: 1.65       # 94.5 degrees
+    has_velocity_limits: true
+    max_velocity: 5.0
+    has_acceleration_limits: true
+    max_acceleration: 10.0
+    has_effort_limits: true
+    max_effort: 10.0
+
+  joint5:
+    has_position_limits: true
+    min_position: -1.5708    # -90 degrees
+    max_position: 1.5708     # 90 degrees
+    has_velocity_limits: true
+    max_velocity: 5.0
+    has_acceleration_limits: true
+    max_acceleration: 10.0
+    has_effort_limits: true
+    max_effort: 10.0
+
+  joint6:
+    has_position_limits: true
+    min_position: -2.0944    # -120 degrees
+    max_position: 2.0944     # 120 degrees
+    has_velocity_limits: true
+    max_velocity: 5.0
+    has_acceleration_limits: true
+    max_acceleration: 10.0
+    has_effort_limits: true
+    max_effort: 10.0
+
+  gripper_joint:
+    has_position_limits: true
+    min_position: 0.0        # Fully open
+    max_position: 0.04       # Fully closed (40mm stroke)
+    has_velocity_limits: true
+    max_velocity: 0.1        # m/s
+    has_acceleration_limits: true
+    max_acceleration: 0.5
+    has_effort_limits: true
+    max_effort: 20.0         # N

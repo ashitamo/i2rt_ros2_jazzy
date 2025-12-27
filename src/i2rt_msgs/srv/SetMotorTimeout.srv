@@ -1,0 +1,13 @@
+# Configure motor watchdog timeout
+# YAM motors have a 400ms default timeout that disables motors
+# if no command is received within the timeout period
+
+uint8 motor_id               # Motor ID (0 = all motors, 1-7 = specific motor)
+bool enable_timeout          # True to enable watchdog, False to disable
+uint32 timeout_ms            # Timeout duration in milliseconds (typically 400ms or 8000ms)
+                             # Only used if enable_timeout is True
+---
+bool success                 # True if service call succeeded
+string message               # Status message or error description
+bool timeout_enabled         # Current timeout status
+uint32 timeout_value_ms      # Current timeout value

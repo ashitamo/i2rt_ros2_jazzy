@@ -1,0 +1,10 @@
+# Enable or disable gravity compensation for the robot arm
+# Also allows adjusting the gravity compensation factor
+
+bool enable                  # True to enable, False to disable
+float32 compensation_factor  # Gravity compensation multiplier (default: 1.3)
+                             # Set to 0.0 to keep current factor
+---
+bool success                 # True if service call succeeded
+string message               # Status message or error description
+float32 current_factor       # Currently active compensation factor

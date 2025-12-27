@@ -1,0 +1,8 @@
+flow_base_node:
+  ros__parameters:
+    control_frequency: 200.0
+    base_frame: "base_link"
+    odom_frame: "odom"
+    publish_tf: true
+    max_linear_velocity: 0.5   # m/s
+    max_angular_velocity: 1.0  # rad/s

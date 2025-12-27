@@ -1,0 +1,9 @@
+# Set current position as zero reference for specified motor
+# Used during initial calibration to establish joint zero positions
+
+uint8 motor_id               # Motor ID to calibrate (1-7 for YAM)
+---
+bool success                 # True if service call succeeded
+string message               # Status message or error description
+float32 previous_offset      # Previous zero offset value
+float32 new_offset           # New zero offset value

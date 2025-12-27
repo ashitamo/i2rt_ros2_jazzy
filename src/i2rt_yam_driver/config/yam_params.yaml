@@ -1,0 +1,26 @@
+yam_hardware_interface:
+  ros__parameters:
+    # CAN configuration
+    can_channel: "can0"
+
+    # Gripper configuration
+    # Options: crank_4310, linear_3507, linear_4310, yam_teaching_handle, no_gripper
+    gripper_type: "crank_4310"
+
+    # Control loop frequency (Hz)
+    # Default: 250Hz matches i2rt native control frequency
+    control_frequency: 250.0
+
+    # Gravity compensation
+    gravity_comp_enabled: true
+    gravity_comp_factor: 1.3  # Multiplier for gravity torque (default: 1.3)
+
+    # Zero gravity mode (free-floating)
+    # WARNING: Only use with motor timeout disabled
+    zero_gravity_mode: false
+
+    # Robot naming
+    robot_name: "yam"
+
+    # TF publishing
+    publish_tf: true

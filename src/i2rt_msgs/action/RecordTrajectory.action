@@ -1,0 +1,20 @@
+# Record a demonstration trajectory
+# Compatible with LeRobot dataset format
+
+# Goal
+string dataset_name          # Name of dataset to record
+string task_description      # Description of the task being demonstrated
+float32 recording_frequency  # Recording frequency in Hz (default: 60.0)
+bool record_camera           # True to record camera images
+---
+# Result
+bool success                 # True if recording completed and saved
+string message               # Status message or error description
+string dataset_path          # Path to saved dataset
+uint32 num_frames            # Number of frames recorded
+float32 duration             # Total recording duration (seconds)
+---
+# Feedback
+bool is_recording            # True if currently recording
+uint32 frames_recorded       # Number of frames recorded so far
+float32 elapsed_time         # Recording time elapsed (seconds)

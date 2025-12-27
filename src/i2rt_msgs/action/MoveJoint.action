@@ -1,0 +1,17 @@
+# Execute a joint trajectory with real-time feedback
+
+# Goal
+float32[] target_positions   # Target joint positions (radians)
+float32 duration             # Time to reach target (seconds)
+bool use_gravity_comp        # Enable gravity compensation during motion
+---
+# Result
+bool success                 # True if motion completed successfully
+string message               # Status message or error description
+float32[] final_positions    # Final joint positions achieved
+float32 position_error       # Maximum position error (radians)
+---
+# Feedback
+float32 progress             # Motion progress (0.0 to 1.0)
+float32[] current_positions  # Current joint positions
+float32 time_remaining       # Estimated time to completion (seconds)

@@ -1,0 +1,10 @@
+# Calibrate linear gripper by measuring full stroke range
+# Required for linear_3507 and linear_4310 grippers
+# Not needed for crank_4310 (zero-linkage design)
+
+# No request parameters needed - calibration is automatic
+---
+bool success                 # True if calibration succeeded
+string message               # Status message or error description
+float32 stroke_range         # Measured stroke range in radians
+bool is_calibrated           # True if gripper is now calibrated
