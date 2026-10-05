@@ -22,6 +22,8 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   "msg/GripperState.msg"
   "msg/TeachingHandleState.msg"
   "msg/FlowBaseOdometry.msg"
+  "msg/EulerPose.msg"
+  "msg/EulerAngles.msg"
 
   # Services
   "srv/SetGravityCompensation.srv"
@@ -38,6 +40,7 @@ rosidl_generate_interfaces(${PROJECT_NAME}
   sensor_msgs
   geometry_msgs
   builtin_interfaces
+  geometry_msgs
 )
 
 if(BUILD_TESTING)

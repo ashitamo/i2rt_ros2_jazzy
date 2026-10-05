@@ -1,39 +1,50 @@
 #!/bin/bash
-# Install I2RT ROS2 Dependencies
+# Install I2RT ROS2 Dependencies for Humble (Docker Optimized)
 
-echo "Installing ROS2 Jazzy dependencies for I2RT workspace..."
+echo "Installing ROS2 Humble dependencies for I2RT workspace..."
 
 # Update package list
-sudo apt update
+apt update
 
 # Install core ROS2 packages
 echo "Installing core ROS2 packages..."
-sudo apt install -y \
-    ros-jazzy-xacro \
-    ros-jazzy-robot-state-publisher \
-    ros-jazzy-joint-state-publisher \
-    ros-jazzy-joint-state-publisher-gui \
-    ros-jazzy-rviz2 \
+apt install -y \
+    ros-humble-xacro \
+    ros-humble-robot-state-publisher \
+    ros-humble-joint-state-publisher \
+    ros-humble-joint-state-publisher-gui \
+    ros-humble-rviz2 \
     python3-colcon-common-extensions
+
+# Install the "Backbone" (ros2_control & MoveIt 2)
+echo "Installing ros2_control and MoveIt 2 components..."
+apt install -y \
+    ros-humble-ros2-control \
+    ros-humble-ros2-controllers \
+    ros-humble-moveit \
+    ros-humble-moveit-configs-utils \
+    ros-humble-controller-manager
 
 # Install additional useful packages
 echo "Installing additional ROS2 packages..."
-sudo apt install -y \
-    ros-jazzy-tf2-ros \
-    ros-jazzy-tf2-tools \
-    ros-jazzy-rqt \
-    ros-jazzy-rqt-common-plugins \
-    ros-jazzy-teleop-twist-keyboard
+apt install -y \
+    ros-humble-tf2-ros \
+    ros-humble-tf2-tools \
+    ros-humble-rqt \
+    ros-humble-rqt-common-plugins \
+    ros-humble-teleop-twist-keyboard
 
 # Optional: Install urdf-tools for validation
 echo "Installing URDF tools..."
-sudo apt install -y \
+apt install -y \
     liburdfdom-tools
 
+# Initialize rosdep if it hasn't been done (common in fresh Docker images)
+if [ ! -d /etc/ros/rosdep/sources.list.d ]; then
+    echo "Initializing rosdep..."
+    rosdep init
+fi
+rosdep update
+
 echo ""
-echo "✅ Dependencies installed successfully!"
-echo ""
-echo "Next steps:"
-echo "1. Build the workspace: colcon build --symlink-install"
-echo "2. Source the workspace: source install/setup.bash"
-echo "3. Test visualization: ros2 launch i2rt_description view_yam.launch.py"
+echo "✅ Humble Dependencies installed successfully!"

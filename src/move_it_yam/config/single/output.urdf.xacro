@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="output">
+    <xacro:arg name="initial_positions_file" default="initial_positions.yaml" />
+
+    <!-- Import output urdf file -->
+    <xacro:include filename="$(find yam_wif_gripper)/yam_st_urdf_with_linear_gripper.urdf" />
+
+    <!-- Import control_xacro -->
+    <xacro:include filename="output.ros2_control.xacro" />
+
+
+    <xacro:output_ros2_control name="FakeSystem" initial_positions_file="$(arg initial_positions_file)"/>
+
+</robot>

@@ -43,7 +43,7 @@ class YAMController(Node):
         self.current_joint_state = None
         self.joint_state_sub = self.create_subscription(
             JointState,
-            f'/{self.robot_name}/joint_states',
+            f'/joint_states',
             self.joint_state_callback,
             10
         )

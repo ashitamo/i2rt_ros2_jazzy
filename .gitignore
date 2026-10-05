@@ -37,3 +37,5 @@ env/
 # Backup files
 *.bak
 *.backup
+
+src/i2rt_yam_teleop/teleop_data

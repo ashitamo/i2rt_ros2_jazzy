@@ -16,7 +16,7 @@ def generate_launch_description():
     # Declare arguments
     gripper_type_arg = DeclareLaunchArgument(
         'gripper_type',
-        default_value='crank_4310',
+        default_value='linear_4310',
         description='Gripper type: crank_4310, linear_3507, linear_4310'
     )
 
@@ -58,7 +58,7 @@ def generate_launch_description():
     rviz_config_file = PathJoinSubstitution([
         FindPackageShare('i2rt_description'),
         'rviz',
-        'view_robot.rviz'
+        'moveit.rviz'
     ])
 
     rviz = Node(

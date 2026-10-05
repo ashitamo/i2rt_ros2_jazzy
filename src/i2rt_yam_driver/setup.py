@@ -26,6 +26,9 @@ setup(
         'console_scripts': [
             'yam_hardware_interface = i2rt_yam_driver.yam_hardware_interface:main',
             'yam_controller = i2rt_yam_driver.yam_controller:main',
+            'yam_hardware_interface_bimanual = i2rt_yam_driver.yam_hardware_interface_bimanual:main',
+            'yam_controller_bimanual = i2rt_yam_driver.yam_controller_bimanual:main',
+            'disp_tf = i2rt_yam_driver.disp_tf:main',
         ],
     },
 )

@@ -1,0 +1,12 @@
+cd home/ros2_yam/
+
+source install/setup.bash
+
+python3 src/i2rt_ros2_humble/src/move_it_yam/cartesian_sender.py
+
+python3 src/i2rt_ros2_humble/src/move_it_yam/euler_to_quat.py
+
+ros2 topic pub /coor_euler i2rt_msgs/msg/EulerPose "{position: {x: 0.30, y: 0.0, z: 0.15}, orientation: {x: 0.0, y: 0.0, z: 0.0}}" -1
+
+
+

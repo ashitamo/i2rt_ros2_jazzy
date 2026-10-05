@@ -1,0 +1,25 @@
+moveit_setup_assistant_config:
+  urdf:
+    package: yam_wif_gripper
+    relative_path: yam_st_urdf_with_linear_gripper.urdf
+  srdf:
+    relative_path: config/output.srdf
+  package_settings:
+    author_name: songtingyu
+    author_email: songtingyu999@gmail.com
+    generated_timestamp: 1777286144
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity
+  modified_urdf:
+    xacros:
+      - control_xacro
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity
