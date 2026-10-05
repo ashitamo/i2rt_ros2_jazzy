@@ -2,6 +2,9 @@
 
 ROS2 Jazzy integration for I2RT robotics products (YAM arm, ARX-R5, Flow Base).
 
+# Warning
+目前這個readme是沒有被更新的請不要參考它
+
 ## Overview
 
 This workspace provides ROS2 interfaces for the [I2RT Python API](https://github.com/i2rt-robotics/i2rt), enabling seamless integration with the ROS2 ecosystem while maintaining high-performance real-time control.
